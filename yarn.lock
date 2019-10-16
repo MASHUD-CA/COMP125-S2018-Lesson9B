@@ -43,6 +43,7 @@ bootstrap@^4.1.1:
 easeljs@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/easeljs/-/easeljs-1.0.2.tgz#68fdcc69d0f217394e2ebf51ae047428a81240de"
+  integrity sha512-PQTsiud32vrUIqZCbynjOJjCzoEp0xH+MRusRCdsZ1MzL4LCE2vp4Sa5cr6aShB3mK4vMZ8LFPnts4xuFhjEmg==
 
 font-awesome@^4.7.0:
   version "4.7.0"

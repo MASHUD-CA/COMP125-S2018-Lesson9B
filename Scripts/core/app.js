@@ -32,8 +32,9 @@
     vec2 = new objects.Vector(300, 400);
 
     canvas = document.getElementById("canvas");
+
     stage = new createjs.Stage(canvas);
-    createjs.Ticker.framerate = 60; // 60 fps
+    createjs.Ticker.framerate = 60; // 60 fps (frame per second)
     createjs.Ticker.addEventListener("tick", GameLoop);
 
     graphics = new createjs.Graphics();
@@ -43,6 +44,8 @@
   }
 
   function GameLoop() {
+    // line.rotation += 5; // to modify the line
+    // line.x += 1;     // to move the line
     stage.update();
   }
 
@@ -64,7 +67,7 @@
 
     console.log(`Distance: ${objects.Vector.distance(vec1, vec2)}`);
     console.log(`Vec1 + Vec2: ${objects.Vector.add(vec1, vec2)}`);
-    /*
+
     graphics.setStrokeStyle(2);
     graphics.beginStroke("#000000");
     graphics.moveTo(vec1.x, vec1.y);
@@ -73,7 +76,6 @@
     graphics.endStroke();
 
     stage.addChild(line);
-    */
   }
 
   window.addEventListener("load", Start);
