@@ -20,7 +20,11 @@
       "font-weight: bold; font-size: 20px; color:blue;"
     );
 
-    clickMeButton = new objects.Button("/Assets/images/ClickMeButton.png", 200, 50);
+    clickMeButton = new objects.Button(
+      "/Assets/images/ClickMeButton.png",
+      200,
+      50
+    );
     ButtonSection = document.getElementById("ButtonSection");
     firstH1 = document.getElementsByTagName("h1")[0];
 
@@ -39,7 +43,6 @@
   }
 
   function GameLoop() {
-
     stage.update();
   }
 
@@ -48,26 +51,29 @@
    * web app is happening
    */
   function Main() {
-    console.log(`%c App Started...`, "font-weight: bold; font-size: 20px; color:green;");
+    console.log(
+      `%c App Started...`,
+      "font-weight: bold; font-size: 20px; color:green;"
+    );
 
     ButtonSection.appendChild(clickMeButton);
 
-    clickMeButton.addEventListener("click", function(){
+    clickMeButton.addEventListener("click", function() {
       firstH1.textContent = "clickMeButton Clicked!";
     });
 
     console.log(`Distance: ${objects.Vector.distance(vec1, vec2)}`);
     console.log(`Vec1 + Vec2: ${objects.Vector.add(vec1, vec2)}`);
-
+    /*
     graphics.setStrokeStyle(2);
     graphics.beginStroke("#000000");
     graphics.moveTo(vec1.x, vec1.y);
     graphics.lineTo(vec2.x, vec2.y);
-    
+
     graphics.endStroke();
 
     stage.addChild(line);
-
+    */
   }
 
   window.addEventListener("load", Start);
